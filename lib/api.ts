@@ -1,5 +1,10 @@
 import axios from "axios";
-import type { CreateNoteData, FetchNotesResponse, Note } from "@/types/note";
+import type { CreateNoteData, Note } from "@/types/note";
+
+export interface FetchNotesResponse {
+  notes: Note[];
+  totalPages: number;
+}
  
 const instance = axios.create({
   baseURL: "https://notehub-public.goit.study/api",
